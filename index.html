@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Foto Finder</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" type="text/css">
   </head>
   <body>
@@ -12,22 +13,28 @@
         FINDER</h1>
     </header>
     <main>
-      <p>Title</p>
-      <input type="text" />
-      <p>Caption</p>
-      <input type="text" />
-      <!-- <label for="file">Choose File</label> -->
-      <input type="file" name="file" id="file" class="input-file" />
-      <button>SAVE</button>
+      <div class="input-field">
+        <label>Title</label>
+        <input type="text" />
+      </div>
+      <div class="input-field">
+        <label>Caption</label>
+        <input type="text" />
+      </div>
+      <div class="choose-save-button">
+        <label class="button" for="file">Choose File</label>
+        <input type="file" name="file" id="file" class="input-file" />
+        <button class="button">SAVE</button>
+      </div>
     </main>
     <section>
       <div class="image-card">
         <h3>card title</h3>
         <img src="http://fillmurray.com/300/200">
         <p>test card p section</p>
-        <section>
-          <img src="images/delete.svg" class="click-icon" alt="">
-          <img src="images/favorite.svg" class="click-icon" alt="">
+        <section class="card-buttons clearfix">
+          <img src="images/delete.svg" class="click-icon" id="card-delete" alt="delete">
+          <img src="images/favorite.svg" class="click-icon" id="card-like" alt="like">
         </section>
       </div>
     </section>
