@@ -13,18 +13,18 @@
         FINDER</h1>
     </header>
     <main>
-      <div class="input-field">
+      <div class="input-field title-field">
         <label>Title</label>
-        <input type="text" />
+        <input id="title" type="text" />
       </div>
       <div class="input-field">
         <label>Caption</label>
-        <input type="text" />
+        <input id="caption"type="text" />
       </div>
       <div class="choose-save-button">
-        <label class="button" for="file">Choose File</label>
+        <label class="button choose-file" for="file">Choose File</label>
         <input type="file" name="file" id="file" class="input-file" />
-        <button class="button">SAVE</button>
+        <button id="save-image" class="button">Add to Album</button>
       </div>
     </main>
     <section>
@@ -38,5 +38,7 @@
         </section>
       </div>
     </section>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="script.js"></script>
     </body>
 </html>
