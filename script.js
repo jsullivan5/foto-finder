@@ -21,12 +21,18 @@ $('#save-image').on("click", function(){
   )
 })
 
-
+// var cardTitle = $('#title').val();
+// var cardCaption = $('#caption').val();
+// var cardImage = filePath($('input:file').val());
+//
+// $(cardTitle).on('change', function () {
+//   console.log('change listener');
+// })
 
 function filePath(filePath) {
    return "photos\\" + filePath.split('\\').pop();
 }
-//
+
 
 function ImageCard(cardTitle, cardImage, cardCaption) {
   this.title = cardTitle;
@@ -37,7 +43,6 @@ function ImageCard(cardTitle, cardImage, cardCaption) {
 $('#gallery').on('click','.click-trash', function() {
   console.log($('.click-trash').parent().parent());
   $(this).parent().parent().remove('.image-card');
-
 });
 
 $('#gallery').on('click','.click-heart', function() {

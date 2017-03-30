@@ -81,6 +81,9 @@ input[type=text] {
 .button:hover {
   background-color: #938284;
 }
+.button:disabled {
+  background-color: lightgray;
+}
 
 .choose-file {
   margin-right: 19%;
