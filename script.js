@@ -4,7 +4,6 @@ $('#save-image').on("click", function(){
   var cardTitle = $('#title').val();
   var cardCaption = $('#caption').val();
   var cardImage = filePath($('input:file').val());
-  // var cardImage = $('input:file').val();
   console.log(cardImage);
   var newImageCard = new ImageCard(cardTitle, cardImage, cardCaption);
   console.log(newImageCard);
@@ -14,13 +13,15 @@ $('#save-image').on("click", function(){
       <img id="card-image" src=${cardImage}>
       <p class="white">${cardCaption}</p>
       <section class="card-buttons clearfix">
-        <img src="images/delete.svg" class="click-icon click-trash" id="card-delete" alt="delete">
-        <img src="images/favorite.svg" class="click-icon click-heart" id="card-like" alt="like">
+        <button class="click-icon click-trash card-delete" alt="delete"></button>
+        <button class="click-icon click-heart card-like" alt="like"></button>
       </section>
     </div>
     `
   )
 })
+
+
 
 function filePath(filePath) {
    return "photos\\" + filePath.split('\\').pop();
@@ -42,5 +43,5 @@ $('#gallery').on('click','.click-trash', function() {
 $('#gallery').on('click','.click-heart', function() {
   console.log($('.click-heart').parent().parent());
   $(this).parent().parent().children().toggleClass('favorited');
-
+  $(this).toggleClass('click-heart-like');
 });

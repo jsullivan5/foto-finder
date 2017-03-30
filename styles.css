@@ -7,6 +7,7 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
+  background-color: #C2B2B4;
 }
 
 header {
@@ -73,8 +74,12 @@ input[type=text] {
   margin: 20px auto;
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   padding: 8px;
+}
+
+.button:hover {
+  background-color: #938284;
 }
 
 .choose-file {
@@ -84,7 +89,7 @@ input[type=text] {
 
 section {
   background-color: #C2B2B4;
-  padding: 5%;
+  padding: 5% 0;
 }
 
 
@@ -93,13 +98,16 @@ section {
 
 .image-card {
   width: 300px;
-  margin: auto;
+  margin: auto auto 10px;
+  border: 2px solid #938284;
+  color: #3E2A35;
+
   /*border: 1px solid #C2B2B4;*/
 }
 h3 {
   /*background: #FFF;*/
   padding: 20px;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .image-card p {
@@ -113,7 +121,7 @@ h3 {
 }
 
 #card-image {
-  width: 300px;
+  width: 100%;
 }
 
 /*.card-buttons {
@@ -121,13 +129,31 @@ h3 {
 /*}*/
 .click-icon {
   width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: #5B4447;
+  margin: 0 10px;
+
 }
 
-#card-like {
+.click-trash {
+  background-image: url(images/delete.svg);
+}
+
+.click-trash:hover {
+  background-image: url(images/delete-active.svg);
+}
+
+.click-heart {
+  background-image: url(images/favorite.svg)
+}
+
+.card-like {
   float: right;
 }
 
-#card-delete {
+.card-delete {
   float: left;
 }
 
@@ -136,11 +162,42 @@ h3 {
 }
 
 .favorited {
-  background-color: red;
+  background-color: #E26D5A;
+  color: #FFF;
+}
+
+.click-heart-like {
+  background-image: url(images/favorite-active.svg);
 }
 
 .clearfix:after {
   content: "";
   display: table;
   clear: both;
+}
+
+@media screen and (min-width: 480px) {
+  h1 {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+
+  .logo {
+    height: 36px;
+  }
+
+}
+
+@media screen and (min-width: 640px) {
+  #gallery {
+    text-align: center;
+    /*margin-left: auto;
+    margin-right: auto;*/
+  }
+
+  .image-card {
+    display: inline-block;
+    text-align: left;
+
+  }
 }

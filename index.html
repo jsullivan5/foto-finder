@@ -5,6 +5,7 @@
     <title>Foto Finder</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" type="text/css">
+    <meta name="viewport" content="width=device-width">
   </head>
   <body>
     <header>
@@ -23,20 +24,20 @@
       </div>
       <div class="choose-save-button">
         <label class="button choose-file" for="file">Choose File</label>
-        <input type="file" name="file" id="file" class="input-file" />
+        <input type="file" accept=".png, .jpeg, .jpg, .gif" name="file" id="file" class="input-file" />
         <button id="save-image" class="button">Add to Album</button>
       </div>
     </main>
     <section id="gallery">
-      <div class="image-card">
+      <!-- <div class="image-card">
         <h3></h3>
         <img id="card-image"src=>
         <p></p>
         <section class="card-buttons clearfix">
-          <img src="images/delete.svg" class="click-icon click-trash" id="card-delete" alt="delete">
-          <img src="images/favorite.svg" class="click-icon click-heart" id="card-like" alt="like">
+          <button class="click-icon click-trash card-delete" alt="delete"></button>
+          <button class="click-icon click-heart card-like" alt="like"></button>
         </section>
-      </div>
+      </div> -->
     </section>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="script.js"></script>
