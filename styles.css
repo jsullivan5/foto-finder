@@ -3,25 +3,25 @@
 }
 
 body {
-  width: 100%;
-  margin: 0;
+  background-color: #C2B2B4;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
-  background-color: #C2B2B4;
+  margin: 0;
+  width: 100%;
 }
 
 header {
   background-color: #3E2A35;
   color: #FFF;
   font-size: 10px;
-  text-align: center;
-  padding: 10px;
   margin: 0;
+  padding: 10px;
+  text-align: center;
 }
 
 h1 {
-  font-weight: 800;
   font-size: 25px;
+  font-weight: 800;
 }
 
 .logo {
@@ -40,19 +40,19 @@ label {
 }
 
 input[type=text] {
-  width: 90%;
-  height: 30px;
   display: block;
+  height: 30px;
   margin: 0 auto;
+  width: 90%;
 }
 
 .input-file {
-	width: 0.1px;
 	height: 0.1px;
 	opacity: 0;
 	overflow: hidden;
 	position: absolute;
-	z-index: -1;
+  width: 0.1px;
+  z-index: -1;
 }
 
 .title-field {
@@ -65,17 +65,17 @@ input[type=text] {
 
 
 .button{
-  display: inline-block;
-  color: #FFF;
-  border: none;
   background-color: #5B4447;
-  width: 35%;
-  height: 40px;
-  margin: 20px auto;
-  text-decoration: none;
+  border: none;
+  color: #FFF;
+  display: inline-block;
   font-weight: 600;
   font-size: 14px;
+  height: 40px;
+  margin: 20px auto;
   padding: 8px;
+  text-decoration: none;
+  width: 35%;
 }
 
 .button:hover {
@@ -83,6 +83,8 @@ input[type=text] {
 }
 .button:disabled {
   background-color: lightgray;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 
 .choose-file {
@@ -95,26 +97,33 @@ section {
   padding: 5% 0;
 }
 
+#gallery {
+  text-align: center;
+}
 
 
 /*Image Card CSS*/
 
-.image-card {
-  width: 300px;
-  margin: auto auto 10px;
-  border: 2px solid #938284;
+#add-file-text {
   color: #3E2A35;
+  font-size: 72pt;
+  margin: auto;
+}
+
+.image-card {
+  color: #3E2A35;
+  border: 2px solid #938284;
+  margin: auto auto 10px;
+  width: 300px;
 
   /*border: 1px solid #C2B2B4;*/
 }
 h3 {
-  /*background: #FFF;*/
-  padding: 20px;
   margin: 0;
+  padding: 20px;
 }
 
 .image-card p {
-  /*background: #FFF;*/
   padding: 15px;
   margin: -5px 0 0 0;
 }
@@ -127,16 +136,13 @@ h3 {
   width: 100%;
 }
 
-/*.card-buttons {
-  background: #5B4447*/
-/*}*/
 .click-icon {
-  width: 30px;
-  height: 30px;
+  background-color: #5B4447;
   background-repeat: no-repeat;
   border: none;
-  background-color: #5B4447;
+  height: 30px;
   margin: 0 10px;
+  width: 30px;
 
 }
 
@@ -174,9 +180,9 @@ h3 {
 }
 
 .clearfix:after {
+  clear: both;
   content: "";
   display: table;
-  clear: both;
 }
 
 @media screen and (min-width: 480px) {
