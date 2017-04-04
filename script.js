@@ -32,42 +32,7 @@ $('#save-image').on("click", function() {
   $('#add-file-text').text('');
 })
 
-// $('#file').on('change', 'input:file', function() {
-//   console.log('hearing file change');
-// })
-
 // Disable Buttons
-
-// $(document).on('input', 'input:text', 'input:file', function (e) {
-//   var title = $('#title').val();
-//   var caption = $('#caption').val();
-//   var chooseFile = $('#file').val();
-//   if (title != '' && caption != '' && chooseFile != '') {
-//     $("#save-image").removeAttr("disabled");
-//   } else {
-//     $("#save-image").attr("disabled", "disabled");
-//   }
-// });
-
-// function
-
-//
-// $(document).on('input', '#title #caption',
-
-
-
-
-//
-// function disable() {
-//   var title = $('#title').val();
-//   var caption = $('#caption').val();
-//   var chooseFile = $('#file').val();
-//   if ($('#title').val() == '' || $('#caption').val() == '' || $('#file').val() == '') {
-//     $('#save-image').prop('disabled', true);
-//   } else {
-//     $('save-image').prop('disabled', false);
-//   }
-// }
 
 function disable() {
 var title = $('#title').val();
@@ -86,11 +51,6 @@ console.log('choosefile = ' + chooseFile);
 }
 
 $(document).on('input change', 'input', disable)
-
-
-
-
-
 
 // Created Content Functionality
 
