@@ -12,7 +12,7 @@ function filePath(filePath) {
 
 //Content Generation
 
-$('#save-image').on("click", function(){
+$('#save-image').on("click", function() {
   var cardTitle = $('#title').val();
   var cardCaption = $('#caption').val();
   var cardImage = filePath($('input:file').val());
@@ -32,38 +32,65 @@ $('#save-image').on("click", function(){
   $('#add-file-text').text('');
 })
 
-$('#file').on('change', 'input:file', function() {
-  console.log('hearing file change');
-})
+// $('#file').on('change', 'input:file', function() {
+//   console.log('hearing file change');
+// })
 
 // Disable Buttons
 
-$(document).on('input', 'input:text', 'input:file', function (e) {
-  var title = $('#title').val();
-  var caption = $('#caption').val();
-  var chooseFile = $('#file').val();
-  if (title != '' && caption != '' && chooseFile != '') {
-    $("#save-image").removeAttr("disabled");
-  } else {
-    $("#save-image").attr("disabled", "disabled");
-  }
-});
+// $(document).on('input', 'input:text', 'input:file', function (e) {
+//   var title = $('#title').val();
+//   var caption = $('#caption').val();
+//   var chooseFile = $('#file').val();
+//   if (title != '' && caption != '' && chooseFile != '') {
+//     $("#save-image").removeAttr("disabled");
+//   } else {
+//     $("#save-image").attr("disabled", "disabled");
+//   }
+// });
 
-$("document").ready(function(){
-  var title = $('#title').val();
-  var caption = $('#caption').val();
-  var chooseFile = $('#file').val();
-  $("#file").change(function() {
-    console.log($('um' + '#file').val());
-    console.log($('#caption').val());
-    console.log($('#title').val());
-    if (chooseFile != undefined) {
-      $("#save-image").removeAttr("disabled");
-    } else {
-      $("#save-image").attr("disabled", "disabled");
-    }
-  });
-});
+// function
+
+//
+// $(document).on('input', '#title #caption',
+
+
+
+
+//
+// function disable() {
+//   var title = $('#title').val();
+//   var caption = $('#caption').val();
+//   var chooseFile = $('#file').val();
+//   if ($('#title').val() == '' || $('#caption').val() == '' || $('#file').val() == '') {
+//     $('#save-image').prop('disabled', true);
+//   } else {
+//     $('save-image').prop('disabled', false);
+//   }
+// }
+
+function disable() {
+var title = $('#title').val();
+var caption = $('#caption').val();
+var chooseFile = $('#file').val();
+if ($('#title').val() === '' || $('#caption').val() === '' || $('#file').val() === '') {
+  $('#save-image').prop('disabled', true);
+} else {
+  $('#save-image').prop('disabled', false);
+}
+console.log('program ran through');
+console.log('so far so good');
+console.log('title = ' + title);
+console.log('caption = ' + caption +typeof(caption));
+console.log('choosefile = ' + chooseFile);
+}
+
+$(document).on('input change', 'input', disable)
+
+
+
+
+
 
 // Created Content Functionality
 
